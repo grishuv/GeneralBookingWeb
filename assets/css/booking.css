@@ -1,0 +1,435 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* CSS for Top Text Styling */
+.top-text {
+  background-color: hsla(145, 35%, 28%, 0.368); /* Background color */
+  padding: 50px; /* Padding around the text */
+}
+
+.top-text h1 {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+.top-text p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.top-text hr {
+  border: none;
+  height: 1px;
+  background-color: #fff; /* Horizontal line color */
+  margin-top: 20px; /* Margin above the horizontal line */
+  margin-bottom: 10px; /* Margin below the horizontal line */
+}
+
+
+/* Styling for different sections */
+/* CSS for Product Section Text Styling */
+.product-section {
+  padding: 50px;
+  overflow: auto;
+}
+
+.product-section h2 {
+  font-size: 24px; /* Product section heading size */
+  font-weight: bold; /* Product section heading weight */
+  color: #333; /* Product section heading color */
+}
+
+.product-section p {
+  font-size: 16px; /* Product section text size */
+  line-height: 1.6; /* Line height for better readability */
+  color: #666; /* Product section text color */
+}
+
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 280px); /* Adjust the minmax values as needed */
+  gap: 20px;
+  max-width: 900px;
+  margin: 20px auto;
+}
+
+.product-card {
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.product-image {
+  width: 100%; /* Ensure the image takes the full width of its container */
+  height: 200px; /* Adjust the height as needed */
+  overflow: hidden; /* Hide any overflow */
+  border-top-left-radius: 8px; /* Maintain border radius */
+  border-top-right-radius: 8px;
+}
+
+.product-image img {
+  width: 100%; /* Make the image fill its container */
+  height: 100%; /* Make the image fill its container */
+  object-fit: cover; /* Maintain aspect ratio and cover the container */
+  object-position: center; /* Center the image within the container */
+}
+
+.product-info {
+  padding: 20px;
+  background-color: hsla(145, 35%, 28%, 0.215); /* White background for product info */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Shadow effect */
+  border-radius: 8px; /* Rounded corners */
+  height:80%;
+}
+
+.product-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #333; /* Dark text color */
+}
+
+.product-price {
+  font-size: 16px;
+  color: hsl(149, 14%, 50%); /* Price color */
+  margin-bottom: 10px;
+}
+
+.product-description {
+  font-size: 14px;
+  color: #666;
+}
+
+.add-to-cart-button {
+  display: inline-block;
+  background-color: hsl(148, 20%, 38%);
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%; /* Make the button full width */
+  margin-top: 10px;
+}
+
+.cart-container {
+  max-width: 850px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #f4f4f4;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.cart-container h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: hsl(149, 14%, 50%);; /* Heading color */
+}
+
+.cart-container .proceed-button {
+  background-color: hsl(148, 20%, 38%); /* Blue button color */
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 20px;
+  font-size: 18px;
+  transition: background-color 0.3s ease;
+}
+
+.cart-container .proceed-button:hover {
+  background-color:  hsl(149, 14%, 50%); /* Darker blue on hover */
+}
+
+.add-to-cart-button:hover {
+  background-color: hsl(149, 14%, 50%);
+}
+
+.quantity-container {
+  display: flex;
+  align-items: center;
+}
+
+.quantity-button {
+  background-color: hsl(148, 20%, 38%);
+  color: #fff;
+  padding: 8px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  margin: 0 5px;
+  transition: background-color 0.3s ease;
+}
+
+.quantity-button:hover {
+  background-color: hsl(149, 14%, 50%);
+}
+
+/* Styles for the remove button in the cart container */
+.cart-container .remove-button {
+  background-color: #dc3545; /* Red background color */
+  color: #fff; /* White text color */
+  padding: 5px 10px; /* Padding around the button */
+  border: none; /* No border */
+  border-radius: 3px; /* Rounded corners */
+  cursor: pointer; /* Cursor style */
+  margin-left: 10px; /* Margin to separate from the product details */
+}
+
+.cart-container .remove-button:hover {
+  background-color: #c82333; /* Darker red on hover */
+}
+
+/* Styles for the product details text in the cart container */
+.cart-container .product-name {
+  font-size: 16px; /* Font size for the product name */
+  font-weight: bold; /* Bold font weight */
+  margin-bottom: 10px;
+}
+
+.cart-container .product-quantity {
+  font-size: 14px; /* Font size for the product quantity */
+  color: #666; /* Text color for quantity */
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.cart-container .product-price {
+  font-size: 16px; /* Font size for the product price */
+  color: #333; /* Text color for price */
+  font-weight: bold; /* Bold font weight */
+  margin-left: 10px;
+}
+
+.product-details {
+  margin-bottom: 10px; /* Add margin at the bottom of each product detail */
+}
+
+.product-details:last-child {
+  margin-bottom: 0; /* Remove margin from the last product detail */
+}
+
+
+/* Styles for the total amount display */
+#total-amount {
+  font-size: 18px; /* Font size of the total amount */
+  font-weight: bold; /* Bold font weight */
+  margin-top: 20px; /* Margin at the top of the total amount display */
+}
+
+.proceed-text {
+  font-size: 18px; /* Adjust font size */
+  font-weight: bold; /* Make the text bold */
+  margin-bottom: 5px; /* Add some spacing below the text */
+  margin-top: 10px;
+  color: #9c555c;
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 768px) {
+  .top-text {
+    padding: 50px 10px; /* Adjust padding for smaller screens */
+  }
+
+  .top-text h1 {
+    font-size: 28px; /* Adjust top heading font size */
+  }
+
+  .top-text p {
+    font-size: 16px; /* Adjust top text font size */
+  }
+
+  .product-section{
+    padding: 10px;
+    margin-top: 20px;
+  }
+
+  .product-section h2 {
+    font-size: 20px; /* Adjust product section heading size */
+  }
+
+  .product-section p {
+    font-size: 14px; /* Adjust product section text size */
+  }
+}
+
+@media screen and (max-width: 600px) {
+
+  .product-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Display product cards in two columns */
+    gap: 10px;
+    max-width: 900px;
+    margin: 20px auto;
+  }
+  
+  .product-card {
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  .cart-container {
+    max-width: 95%;
+    margin: 20px auto; /* Adjust the horizontal margin as needed */
+    padding: 10px;
+  }
+}
+
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+  z-index: 9999;
+  display: none;
+  backdrop-filter: blur(5px); /* Blur the background */
+}
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  z-index: 10000;
+  display: none;
+}
+.popup h2 {
+  margin-bottom: 10px;
+  font-size: 1.2em;
+}
+.popup p {
+  margin-bottom: 20px;
+  color: #666;
+  line-height: 1.5;
+}
+
+.head
+{
+  color: hsl(148, 20%, 38%);
+  font-weight: bolder;
+}
+.popup button {
+  padding: 10px 20px;
+  background-color: hsl(148, 20%, 38%);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.popup button:hover {
+  background-color: hsl(149, 14%, 50%);
+}
+@media screen and (max-width: 600px) {
+  .popup {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .product-details {
+    margin-bottom: 5px; /* Reduce margin for smaller screens */
+  }
+}
+#payment-popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+  z-index: 9999;
+  display: none;
+  backdrop-filter: blur(5px); /* Blur the background */
+}
+
+#payment-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  z-index: 10000;
+  display: none;
+}
+
+#payment-popup h2 {
+  font-size: 24px; /* Heading font size */
+  margin-bottom: 20px; /* Margin below the heading */
+  color: #333; /* Heading color */
+}
+
+#payment-popup p {
+  font-size: 16px; /* Paragraph font size */
+  line-height: 1.6; /* Line height for better readability */
+  color: #666; /* Paragraph text color */
+  margin-bottom: 20px; /* Margin below paragraphs */
+}
+
+#company-name {
+  font-size: 18px; /* Company name font size */
+  font-weight: bold; /* Company name font weight */
+  margin-bottom: 10px; /* Margin below company name */
+}
+
+#bill-details {
+  margin-bottom: 20px; /* Margin below bill details */
+}
+
+#bill-details div {
+  font-size: 16px; /* Font size for bill details */
+  margin-bottom: 5px; /* Margin below each bill detail */
+}
+
+#payment-popup button {
+  padding: 10px 20px; /* Padding for buttons */
+  background-color: hsl(148, 20%, 38%); /* Button background color */
+  color: #fff; /* Button text color */
+  border: none; /* No border */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Cursor style */
+  transition: background-color 0.3s ease; /* Smooth transition for background color */
+}
+
+#payment-popup button:hover {
+  background-color: hsl(149, 14%, 50%); /* Darker background color on hover */
+}
+
+.cart-notification {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #ffffff;
+  border: 1px solid #dddddd;
+  border-radius: 50%;
+  padding: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+  display: none;
+}
+
+.cart-notification.show {
+  display: block;
+}

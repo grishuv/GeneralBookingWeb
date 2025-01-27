@@ -1,0 +1,83 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+
+.form-container {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Make the container take the full height of the viewport */
+}
+
+.form-container h2 {
+    margin-bottom: 20px; /* Add some spacing below the heading */
+}
+
+.form-container form {
+    width: 90%; /* Adjust the width of the form */
+    max-width: 500px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+/* Style for form labels */
+.form-container label {
+    font-weight: bold;
+}
+
+/* Style for form inputs */
+.form-container input[type="text"],
+.form-container textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+/* Style for file input */
+.form-container input[type="file"] {
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+/* Style for submit button */
+.form-container input[type="submit"] {
+    background-color: hsl(148, 20%, 38%);
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.form-container input[type="submit"]:hover {
+    background-color: hsl(149, 14%, 50%);
+}
+
+/* Style for error message */
+.form-container .error {
+    color: red;
+    margin-top: 10px;
+}
+
+/* Style for success message */
+.form-container .success {
+    color: green;
+    margin-top: 10px;
+}
+
+/* Media query for responsiveness */
+@media (max-width: 600px) {
+    .form-container form {
+        width: 100%; /* Adjust the width of the form for smaller screens */
+    }
+}
